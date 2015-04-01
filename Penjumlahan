@@ -1,0 +1,36 @@
+import java.util.*;
+public class Penjumlahan
+{
+  public static void main(String[]args)
+  {
+    Scanner br=new Scanner(System.in);
+    
+      int soal;
+      int bil;
+      int jwb;
+      int tot=0;
+      int count=1;
+      System.out.println("======================");
+  	  System.out.println("\"BelajarPenjumlahan\"");
+  	  System.out.println("======================");
+      System.out.print("Masukkan jumlah soal :");
+  	  soal=br.nextInt();
+  	
+    
+        while (count<=soal)
+        {
+           double bilx=Math.random()*10;
+           double bily=Math.random()*10;
+           bil =(int) bilx + (int) bily;
+           System.out.print(count + "." + " " +(int) bilx + "+" + (int)bily + "=");
+           jwb=br.nextInt();
+          
+          if (bil==jwb)
+          {
+           tot=tot+10;
+          }
+         count++;
+       }
+    System.out.print("Nilai Anda =" +" "+tot);
+  }
+}
