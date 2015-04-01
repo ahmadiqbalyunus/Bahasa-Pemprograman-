@@ -1,0 +1,62 @@
+import java.util.*;
+public class Daftar_Menu_Makanan_dan_Minuman
+{
+ public static void main(String[]args)
+ {
+    Scanner br=new Scanner(System.in);
+    int menu=0;  
+    int pilih;  
+    int porsi;  
+    int subtot=0;
+    int harga;
+    int keluar=0;
+    int tot=0;
+      
+  do
+  {
+     System.out.println("  Menu Makanan dan minuman   ");
+     System.out.println("=============================");
+     System.out.println(" 1. Nasi Goreng  = Rp.15000  ");
+     System.out.println(" 2. Mie Goreng   = Rp.9000   ");
+     System.out.println(" 3. Mie Kuah     = Rp.8000   ");
+     System.out.println(" 4. Es Teh       = Rp.2500   "); 
+     System.out.println(" 5. Es Jeruk     = Rp.3000   ");
+     System.out.println("============================");
+     System.out.print("SILAHKAN PILIH MENU YANG ANDA INGINKAN [1-5]: ");
+     pilih=br.nextInt();  
+    
+       switch(pilih) 
+      {
+      case 1: menu=12000;
+      break;
+      case 2: menu=12000;
+      break;
+      case 3: menu=14000;
+      break;
+      case 4: menu=3000;
+      break;
+      case 5: menu=4000;
+      break;
+      default:
+       subtot=0;
+       System.out.println("Maaf menu yang anda pilih tidak tersedia ");
+      }
+        
+         if (pilih<=5)
+         {
+            System.out.print("Masukkan jumlah porsi : ");
+            porsi=br.nextInt(); 
+            subtot= menu * porsi;
+            System.out.println("Subtot : "+subtot);
+          }      
+       System.out.print("Beli lagi?[1=ya 0=tidak] : ");
+       keluar=br.nextInt();
+       tot=tot+subtot;
+       
+  }
+    while(keluar==1);
+    {
+     System.out.print("TOTAL Transaksi : " + tot);
+    }
+ }
+}
