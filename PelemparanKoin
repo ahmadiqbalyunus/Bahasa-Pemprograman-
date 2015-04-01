@@ -1,0 +1,51 @@
+import java.io.*;
+
+public class PelemparanKoin
+{
+ public static void main (String[]args) throws IOException
+ {
+ 
+	BufferedReader br = new BufferedReader ( new InputStreamReader(System.in));
+	
+	int gambar, angka;
+	
+	
+	 System.out.println("====================");
+	 System.out.println("1.       |   angka  ");
+	 System.out.println("2.       |   angka  ");
+	 System.out.println("3.       |   angka  ");
+	 System.out.println("4.       |   angka  ");
+	 System.out.println("5.       |   angka  ");
+	 System.out.println("6.       |   angka  ");
+	 System.out.println("7.       |   gambar ");
+	 System.out.println("8.       |   gambar ");
+	 System.out.println("9.       |   gambar ");
+	 System.out.println("10.      |   gambar ");
+	 System.out.println("====================");
+	
+	
+	
+		System.out.print (" masukan banyak angka: " );
+		angka = Integer.parseInt (br.readLine());
+		
+		System.out.print (" masukan banyak gambar: " );
+		gambar = Integer.parseInt (br.readLine());
+	
+			
+			
+			if (gambar==angka)
+			{
+			System.out.println(" seri ");
+			}
+				else if (gambar > angka)
+				{
+						System.out.println(" gambar lebih besar ");
+				}
+					
+					else 
+					{
+							System.out.println(" gambar lebih kecil ");
+					}
+	
+  } 
+ }
