@@ -1,51 +1,41 @@
-import java.io.*;
+import java.util.*;
+public class PelemparanKoin {
+  public static void main (String [] args){
+  Scanner masukan=new Scanner (System.in);
 
-public class PelemparanKoin
-{
- public static void main (String[]args) throws IOException
- {
+  int gambar=0;
+  int angka=0;
+  System.out.println("No."+"\t|  HASIL LEMPARAN");
+  System.out.println("--------------------------");
+
+  for (int i=1;i<=12;i++){
+  int bilRandom=(int)(Math.random()+0.5);
+
+  if (bilRandom>=1){
+    System.out.println(i+"\t|\t Gambar");
+    gambar+=1;
+  }
+  else{
+    System.out.println(i+"\t|\t Angka");
+    angka+=1;
+  }
+  }
+ System.out.println("--------------------------");
+ System.out.println("SKOR GAMBAR :"+gambar);    
+ System.out.println("SKOR ANGKA  :"+angka);
  
-	BufferedReader br = new BufferedReader ( new InputStreamReader(System.in));
-	
-	int gambar, angka;
-	
-	
-	 System.out.println("====================");
-	 System.out.println("1.       |   angka  ");
-	 System.out.println("2.       |   angka  ");
-	 System.out.println("3.       |   angka  ");
-	 System.out.println("4.       |   angka  ");
-	 System.out.println("5.       |   angka  ");
-	 System.out.println("6.       |   angka  ");
-	 System.out.println("7.       |   gambar ");
-	 System.out.println("8.       |   gambar ");
-	 System.out.println("9.       |   gambar ");
-	 System.out.println("10.      |   gambar ");
-	 System.out.println("====================");
+ if (angka==gambar){
+    System.out.println("SERI"); 
+  }
+  else{
+    if (angka<gambar){
+    System.out.println("GAMBAR MENANG");
+    }
+    else{
+    System.out.println("ANGKA MENANG");}
+  }
+  }
+}
 	
 	
-	
-		System.out.print (" masukan banyak angka: " );
-		angka = Integer.parseInt (br.readLine());
-		
-		System.out.print (" masukan banyak gambar: " );
-		gambar = Integer.parseInt (br.readLine());
-	
-			
-			
-			if (gambar==angka)
-			{
-			System.out.println(" seri ");
-			}
-				else if (gambar > angka)
-				{
-						System.out.println(" gambar lebih besar ");
-				}
-					
-					else 
-					{
-							System.out.println(" gambar lebih kecil ");
-					}
-	
-  } 
- }
+
